@@ -1,0 +1,32 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+
+%SetFonts
+
+%SetFonts
+
+
+\title{Projet PAP}
+\author{Loan Godard, Zakaria Azzouz}
+
+\begin{document}
+\maketitle
+\section{Introduction}
+
+L'objectif de ce projet est de produire des images représentants une scène 3D à l'aide de la méthode de tracé de rayons. On crée un monde virtuel 3D en donnant un certain nombre d'informations au programme : coordonnées de la caméra, des formes, des plans... Les formes comprennent par exemple des sphères, des quelles nous devrons connaitre les coordonnées du centre, don rayon et sa texture. La texture de la matière permettra de rendre différemment les formes, la lumière de la scène sera plus ou moins réfléchis en fonction de la brillance ce qui donnera un effet de miroir à l'objet observé. Les coordonnées, la direction et l'intensité de la lumière devront également être entré par l'utilisateur du programme.
+
+\section{La théorie du lancer de rayons}
+\subsection{Présentation de la méthode}
+Pour représenter visuellement un monde 3D comme décrit précédemment, nous allons tout d'abord placer tous les objets dans l'espace. Ensuite nous positionnons un écran de taille définie WxH par l'utilisateur devant la caméra et nous lan\c cons WxH rayons (un par pixel de l'écran). Si le rayon lancé rencontre une ou plusieurs formes, nous colorions le pixel de l'écran par lequel passe le rayon. L'intensité du pixel sera déterminée par la distance entre la forme et la caméra. Si le rayon rencontre plusieurs formes, alors nous prendrons en compte uniquement le point d'intersection le plus proche de la caméra. Si l'objet possède un indice de réflexion, nous continuons de suivre le rayon réfléchie et s'il est intersecté avec une autre forme, on colorie le pixel en fonction de la distance et des autres paramètres.
+
+\subsection{Les mathématiques}
+On positionne la caméra en $(x_{c},y_{c},z_{c}) \in \mathbb{R}^{3}$ et on lui donne une direction $\vec{d_{c}}$. On envois $W\times H$ des rayons unitaires où $W,H \in \mathbb{N}$ représentent respectivement la largeur et la hauteur de l'image rendu (en pixels). On pose $A_{k}=(x_{k},y_{k},z_{k})$ les coordonnées du pixel de l'écran courant. Dans l'algorithme, nous parcourons deux boucles $\mathit{for}$ indexés par i allant de $0$ à $H$ et par j allant de $0$ à $W$. Dans ce cas, les coordonnées du pixel courant (on entend le pixel par lequel on vas passer le prochain rayon) est $A_{k} = (j-\frac{W}{2},i-\frac{H}{2})$
+
+
+\end{document}  
