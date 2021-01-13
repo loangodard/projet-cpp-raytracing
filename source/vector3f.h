@@ -20,5 +20,7 @@ Vector3f operator*(float a, const Vector3f & v2);
 Vector3f operator+(const Vector3f & v1, const Vector3f & v2);
 Vector3f operator-(const Vector3f & v1, const Vector3f & v2);
 float norme(const Vector3f & v1);
+Vector3f vectoriel(const Vector3f & u, const Vector3f & v);
+Vector3f get_normalized(const Vector3f & v);
 
 #endif
