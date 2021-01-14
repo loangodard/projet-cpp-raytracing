@@ -17,8 +17,8 @@ inline void setRGB(png_byte *ptr, float val);
 // This function actually writes out the PNG image file. The string 'title' is
 // also written into the image file
 png_structp initImage(char* filename, int width, int height, char* title,FILE* fp,png_structp &png_ptr,png_infop &info_ptr);
-void writeImage(png_structp &png_ptr, float *buffer, int width, int height, FILE *fp, png_infop &info_ptr);
-void write_pixel(float *buffer, int i, int j, int r, int g, int b, int width);
+void writeImage(png_structp &png_ptr, float* R,float* G,float* B, int width, int height, FILE *fp, png_infop &info_ptr);
+void write_pixel(float* R,float* G,float* B, int i, int j, int r, int g, int b, int width);
 
 
 #endif

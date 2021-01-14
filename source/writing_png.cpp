@@ -56,20 +56,20 @@ png_structp initImage(char *filename, int width, int height, char *title, FILE *
 	return png_ptr;
 }
 
-void writeImage(png_structp &png_ptr, float *buffer, int width, int height, FILE *fp, png_infop &info_ptr)
+void writeImage(png_structp &png_ptr, float* R,float* G,float* B, int width, int height, FILE *fp, png_infop &info_ptr)
 {
 	png_bytep row = NULL;
 	// Write image data
 	int x, y;
+	row = (png_bytep)malloc(3 * width * sizeof(png_byte));
 	for (y = 0; y < height; y++)
 	{
-		row = (png_bytep)malloc(3 * width * sizeof(png_byte));
 		for (x = 0; x < width; x++)
 		{
-			for (int i = 0; i < 3; i++)
-			{ //RGB
-				row[x + i] = buffer[x * width + y + i];
-			}
+				(&row[3*x])[0] = R[y * width + x];
+				(&row[3*x])[1] = G[y * width + x];
+				(&row[3*x])[2] = B[y * width + x];
+
 		}
 		png_write_row(png_ptr, row);
 	}
@@ -89,9 +89,9 @@ void writeImage(png_structp &png_ptr, float *buffer, int width, int height, FILE
 	return;
 }
 
-void write_pixel(float *buffer, int i, int j, int r, int g, int b, int width)
+void write_pixel(float* R,float* G,float* B, int i, int j, int r, int g, int b, int width)
 {
-	buffer[i * width + j] = r;
-	buffer[i * width + j + 1] = g;
-	buffer[i * width + j + 2] = b;
+	R[i * width + j] = r;
+	G[i * width + j] = g;
+	B[i * width + j] = b;
 }

@@ -27,14 +27,16 @@ int main()
 
     Vector3f source = Vector3f(10, 10, -1.8);
 
-    int width = 501;
-    int height = 501;
+    int width = 701;
+    int height = 701;
 
     // Create a test image - in this case a Mandelbrot Set fractal
     // The output is a 1D array of floats, length: width * height
     printf("Creating Image\n");
 
-    float *buffer = (float *)malloc(width * height * 3 * sizeof(float));
+    float *R = (float *)malloc(width * height * sizeof(float));
+    float *G = (float *)malloc(width * height * sizeof(float));
+    float *B = (float *)malloc(width * height * sizeof(float));
 
     png_bytep img_info = NULL;
     img_info = (png_bytep)malloc(3 * width * height * sizeof(png_byte)); //<=> row
@@ -57,11 +59,11 @@ int main()
             bool isHit1 = plan.is_hit(ray, d1);
             bool isHit2 = plan2.is_hit(ray, d2);
             bool isHit3 = plan3.is_hit(ray, d3);
-            std::cout << d1 << " " << d2 << " " << d3 << std::endl;
+            // std::cout << d1 << " " << d2 << " " << d3 << std::endl;
 
             if (s.is_hit(Ray3f(Vector3f(0, 0, 0), Vector3f(-floor(width / 2) + j, floor(height / 2) - i, -2))))
             {
-                buffer[i * width + j] = 0.2;
+                write_pixel(R,G,B,i,j,10,50,10,width);
             }
             // else if(s2.is_hit(Ray3f(Vector3f(0,0,0), Vector3f(-floor(width/2)+j,floor(height/2)-i,-2)))){
             //     std::cout<<2;
@@ -70,19 +72,19 @@ int main()
 
             else if (isHit2)
             {
-                write_pixel(buffer,i,j,255,0,255,width);
+                write_pixel(R,G,B,i,j,58,200,255,width);
             }
             else if (isHit3)
             {
-                write_pixel(buffer,i,j,255,255,255,width);
+                write_pixel(R,G,B,i,j,0,0,255,width);
             }
             else if (isHit1 && d1 < d3)
             {
-                write_pixel(buffer,i,j,0,0,255,width);
+                write_pixel(R,G,B,i,j,255,0,0,width);
             }
             else
             {
-                write_pixel(buffer,i,j,0,0,0,width);
+                write_pixel(R,G,B,i,j,0,0,0,width);
             }
         }
     }
@@ -91,10 +93,12 @@ int main()
     // Save the image to a PNG file
     // The 'title' string is stored as part of the PNG file
     printf("Saving PNG\n");
-    writeImage(png_ptr,buffer,width,height,fp,info_ptr);
+    writeImage(png_ptr,R,G,B,width,height,fp,info_ptr);
 
     // Free up the memorty used to store the image
-    free(buffer);
+    free(R);
+    free(G);
+    free(B);
 
     return 1;
 }
