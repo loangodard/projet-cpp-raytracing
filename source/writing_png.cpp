@@ -91,7 +91,8 @@ void writeImage(png_structp &png_ptr, float* R,float* G,float* B, int width, int
 
 void write_pixel(float* R,float* G,float* B, int i, int j, int r, int g, int b, int width)
 {
-	R[i * width + j] = r;
-	G[i * width + j] = g;
-	B[i * width + j] = b;
+	// if(r != 0 ||g != 0||b != 0)std::cout<< r << ","<< g << ","<< b << "\n";
+	R[i * width + j] = (r < 0) ? 0 : r;
+	G[i * width + j] = (g < 0) ? 0 : g;
+	B[i * width + j] = (b < 0) ? 0 : b;
 }

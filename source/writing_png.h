@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <iostream>
 #include <png.h>
+#include "utils.h"
 // g++ writing_png.cpp -lpng -lz
 
 // Creates a test image for saving. Creates a Mandelbrot Set fractal of size width x height

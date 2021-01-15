@@ -7,7 +7,7 @@ class Vector3f {
 	private:
 		float x,y,z;
 	public:
-		Vector3f(float x_, float y_, float z_);
+		Vector3f(float x_ = 0, float y_ = 0, float z_ = 0);
 		Vector3f(const Vector3f & v);
 		float get_x() const;
 		float get_y() const;
@@ -17,6 +17,7 @@ class Vector3f {
 
 float operator*(const Vector3f & v1, const Vector3f & v2);
 Vector3f operator*(float a, const Vector3f & v2);
+Vector3f operator/(const Vector3f & v2,float a);
 Vector3f operator+(const Vector3f & v1, const Vector3f & v2);
 Vector3f operator-(const Vector3f & v1, const Vector3f & v2);
 float norme(const Vector3f & v1);

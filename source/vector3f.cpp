@@ -44,7 +44,14 @@ Vector3f operator+(const Vector3f & v1, const Vector3f & v2){
 }
 
 Vector3f operator-(const Vector3f & v1, const Vector3f & v2){
-	return(v1+(-1)*v2);
+	Vector3f a = v1;
+	Vector3f b = (-1)*v2;
+	return(a+b);
+}
+
+Vector3f operator/(const Vector3f & v2,float a){
+	if(a == 0) throw("Error, 0 division");
+	return(v2*(1/a));
 }
 
 float norme(const Vector3f & v1){

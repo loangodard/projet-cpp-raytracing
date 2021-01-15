@@ -10,7 +10,7 @@ class Shape{
         Shape(Material mat);
         Material get_material() const;
         Ray3f reflect(Ray3f ray) const;
-        bool is_hit(Ray3f ray) const;
+        bool is_hit(Ray3f ray,Vector3f& P, Vector3f& N, float& t) const;
 };
 
 #endif

@@ -9,7 +9,8 @@ class Sphere : public Shape{
         float radius;
     public:
         Sphere(Vector3f origin_,float radius_,Material mat);
-        bool is_hit(Ray3f ray) const;
+        bool is_hit(Ray3f ray, Vector3f& P,Vector3f& N,float& t) const;
+        Material get_mat();
 };
 
 #endif
