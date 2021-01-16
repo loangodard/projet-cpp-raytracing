@@ -44,7 +44,7 @@ png_structp initImage(char *filename, int width, int height, char *title, FILE *
 	{
 		png_text title_text;
 		title_text.compression = PNG_TEXT_COMPRESSION_NONE;
-		title_text.key = "Title";
+		title_text.key = strdup("Title");
 		title_text.text = title;
 		png_set_text(png_ptr, info_ptr, &title_text, 1);
 	}

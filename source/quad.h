@@ -10,7 +10,7 @@ class Quad : public Shape{
         Vector3f height;
     public:
         Quad(Vector3f origin_, Vector3f width_, Vector3f height_,Material mat_);
-        bool is_hit(Ray3f ray,float &d) const;
+        bool is_hit(const Ray3f &r,Vector3f & P, Vector3f & N,float &t) const;
 };
 
 #endif
