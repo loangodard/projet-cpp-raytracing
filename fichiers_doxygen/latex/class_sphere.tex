@@ -1,0 +1,86 @@
+\hypertarget{class_sphere}{}\doxysection{Sphere Class Reference}
+\label{class_sphere}\index{Sphere@{Sphere}}
+
+
+Sphères.  
+
+
+
+
+{\ttfamily \#include $<$sphere.\+h$>$}
+
+Inheritance diagram for Sphere\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sphere}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sphere_af98353d6b494bb373d78a0e160f5cb69}{Sphere}} (\mbox{\hyperlink{class_vector3f}{Vector3f}} origin\+\_\+, float radius\+\_\+, \mbox{\hyperlink{class_material}{Material}} mat)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_sphere}{Sphere}} object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sphere_a629e5661fae6c51a1055ed81bfa681e9}{is\+\_\+hit}} (\mbox{\hyperlink{class_ray3f}{Ray3f}} ray, \mbox{\hyperlink{class_vector3f}{Vector3f}} \&P, \mbox{\hyperlink{class_vector3f}{Vector3f}} \&N, float \&t) const
+\begin{DoxyCompactList}\small\item\em Renvoi un booléen en fonction de s\textquotesingle{}il y a intersection entre le rayon et la sphère ou non. Modifie également par référence P,N, et t qui permettent ensuite de calculer l\textquotesingle{}intensité de la lumière au point courant. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Sphères. 
+
+\mbox{\hyperlink{class_sphere}{Sphere}} hérite de \mbox{\hyperlink{class_shape}{Shape}} 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sphere_af98353d6b494bb373d78a0e160f5cb69}\label{class_sphere_af98353d6b494bb373d78a0e160f5cb69}} 
+\index{Sphere@{Sphere}!Sphere@{Sphere}}
+\index{Sphere@{Sphere}!Sphere@{Sphere}}
+\doxysubsubsection{\texorpdfstring{Sphere()}{Sphere()}}
+{\footnotesize\ttfamily Sphere\+::\+Sphere (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector3f}{Vector3f}}}]{origin\+\_\+,  }\item[{float}]{radius\+\_\+,  }\item[{\mbox{\hyperlink{class_material}{Material}}}]{mat }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_sphere}{Sphere}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em origin\+\_\+} & \\
+\hline
+{\em radius\+\_\+} & \\
+\hline
+{\em mat} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sphere_a629e5661fae6c51a1055ed81bfa681e9}\label{class_sphere_a629e5661fae6c51a1055ed81bfa681e9}} 
+\index{Sphere@{Sphere}!is\_hit@{is\_hit}}
+\index{is\_hit@{is\_hit}!Sphere@{Sphere}}
+\doxysubsubsection{\texorpdfstring{is\_hit()}{is\_hit()}}
+{\footnotesize\ttfamily bool Sphere\+::is\+\_\+hit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ray3f}{Ray3f}}}]{ray,  }\item[{\mbox{\hyperlink{class_vector3f}{Vector3f}} \&}]{P,  }\item[{\mbox{\hyperlink{class_vector3f}{Vector3f}} \&}]{N,  }\item[{float \&}]{t }\end{DoxyParamCaption}) const}
+
+
+
+Renvoi un booléen en fonction de s\textquotesingle{}il y a intersection entre le rayon et la sphère ou non. Modifie également par référence P,N, et t qui permettent ensuite de calculer l\textquotesingle{}intensité de la lumière au point courant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ray} & Rayon \\
+\hline
+{\em P} & Point d\textquotesingle{}intersection \\
+\hline
+{\em N} & Normale à la sphère au point d\textquotesingle{}intersection \\
+\hline
+{\em t} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sphere.\+h\item 
+sphere.\+cpp\end{DoxyCompactItemize}

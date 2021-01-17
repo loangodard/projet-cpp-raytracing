@@ -2,9 +2,10 @@
 #define SPHERE_H
 #include "shape.h"
 #include "vector3f.h"
+#include "writing_png.h"
 
 /**
- * @brief Class permettant d'implémenter les sphères
+ * @brief Sphères
  * 
  * Sphere hérite de Shape
  * 
@@ -40,13 +41,6 @@ class Sphere : public Shape{
          * @return false 
          */
         bool is_hit(Ray3f ray, Vector3f& P,Vector3f& N,float& t) const;
-
-        /**
-         * @brief Get the mat object
-         * 
-         * @return Material 
-         */
-        Material get_mat();
 };
 
 #endif

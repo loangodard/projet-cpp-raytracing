@@ -4,7 +4,7 @@
 #include "vector3f.h"
 
 /**
- * @brief Implémentation des formes "plans", hérite de la classe Shape
+ * @brief Plans
  * 
  */
 class Quad : public Shape{

@@ -1,0 +1,86 @@
+\hypertarget{class_quad}{}\doxysection{Quad Class Reference}
+\label{class_quad}\index{Quad@{Quad}}
+
+
+Plans.  
+
+
+
+
+{\ttfamily \#include $<$quad.\+h$>$}
+
+Inheritance diagram for Quad\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_quad}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_quad_a438bb8c4f00d0be7e90b0441747d3372}{Quad}} (\mbox{\hyperlink{class_vector3f}{Vector3f}} origin\+\_\+, \mbox{\hyperlink{class_vector3f}{Vector3f}} width\+\_\+, \mbox{\hyperlink{class_vector3f}{Vector3f}} height\+\_\+, \mbox{\hyperlink{class_material}{Material}} mat\+\_\+)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_quad}{Quad}} object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_quad_a1a09cfb31a549fdcaa9a3325a0ffca35}{is\+\_\+hit}} (const \mbox{\hyperlink{class_ray3f}{Ray3f}} \&r, \mbox{\hyperlink{class_vector3f}{Vector3f}} \&P, \mbox{\hyperlink{class_vector3f}{Vector3f}} \&N, float \&t) const
+\begin{DoxyCompactList}\small\item\em Renvoi un booléen en fonction de s\textquotesingle{}il y a intersection entre le rayon et le plan ou non. Modifie également par référence P,N, et t qui permettent ensuite de calculer l\textquotesingle{}intensité de la lumière au point courant. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Plans. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_quad_a438bb8c4f00d0be7e90b0441747d3372}\label{class_quad_a438bb8c4f00d0be7e90b0441747d3372}} 
+\index{Quad@{Quad}!Quad@{Quad}}
+\index{Quad@{Quad}!Quad@{Quad}}
+\doxysubsubsection{\texorpdfstring{Quad()}{Quad()}}
+{\footnotesize\ttfamily Quad\+::\+Quad (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector3f}{Vector3f}}}]{origin\+\_\+,  }\item[{\mbox{\hyperlink{class_vector3f}{Vector3f}}}]{width\+\_\+,  }\item[{\mbox{\hyperlink{class_vector3f}{Vector3f}}}]{height\+\_\+,  }\item[{\mbox{\hyperlink{class_material}{Material}}}]{mat\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_quad}{Quad}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em origin\+\_\+} & \\
+\hline
+{\em width\+\_\+} & \\
+\hline
+{\em height\+\_\+} & \\
+\hline
+{\em mat\+\_\+} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_quad_a1a09cfb31a549fdcaa9a3325a0ffca35}\label{class_quad_a1a09cfb31a549fdcaa9a3325a0ffca35}} 
+\index{Quad@{Quad}!is\_hit@{is\_hit}}
+\index{is\_hit@{is\_hit}!Quad@{Quad}}
+\doxysubsubsection{\texorpdfstring{is\_hit()}{is\_hit()}}
+{\footnotesize\ttfamily bool Quad\+::is\+\_\+hit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_ray3f}{Ray3f}} \&}]{r,  }\item[{\mbox{\hyperlink{class_vector3f}{Vector3f}} \&}]{P,  }\item[{\mbox{\hyperlink{class_vector3f}{Vector3f}} \&}]{N,  }\item[{float \&}]{t }\end{DoxyParamCaption}) const}
+
+
+
+Renvoi un booléen en fonction de s\textquotesingle{}il y a intersection entre le rayon et le plan ou non. Modifie également par référence P,N, et t qui permettent ensuite de calculer l\textquotesingle{}intensité de la lumière au point courant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & \\
+\hline
+{\em P} & \\
+\hline
+{\em N} & \\
+\hline
+{\em t} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+quad.\+h\item 
+quad.\+cpp\end{DoxyCompactItemize}

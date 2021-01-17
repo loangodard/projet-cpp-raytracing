@@ -4,7 +4,7 @@
 #include <math.h>
 
 /**
- * @brief Classe représentant des vecteurs de dimensions 3
+ * @brief Vecteurs de dimensions 3
  * 
  */
 class Vector3f {

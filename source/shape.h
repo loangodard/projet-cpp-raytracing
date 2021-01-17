@@ -4,7 +4,7 @@
 #include "ray3f.h"
 
 /**
- * @brief Implémentation des formes
+ * @brief Formes
  * 
  */
 class Shape{
@@ -27,14 +27,6 @@ class Shape{
          * @return Material 
          */
         Material get_material() const;
-
-        /**
-         * @brief renvoi le rayon réfléchi (À implémenter)
-         * 
-         * @param ray 
-         * @return Ray3f 
-         */
-        Ray3f reflect(Ray3f ray) const;
 
         /**
          * @brief Renvoi un booléen en fonction de s'il y a intersection entre le rayon et la forme ou non. Modifie également par référence

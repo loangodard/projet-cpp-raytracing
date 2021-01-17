@@ -1,0 +1,95 @@
+\hypertarget{class_shape}{}\doxysection{Shape Class Reference}
+\label{class_shape}\index{Shape@{Shape}}
+
+
+Formes.  
+
+
+
+
+{\ttfamily \#include $<$shape.\+h$>$}
+
+Inheritance diagram for Shape\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_shape}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_shape_a2d06b8b9476e28f2ef36f228ac57fcce}{Shape}} (\mbox{\hyperlink{class_material}{Material}} mat)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_shape}{Shape}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_material}{Material}} \mbox{\hyperlink{class_shape_a6907736e63b959a3ac68aa1b5f02884a}{get\+\_\+material}} () const
+\begin{DoxyCompactList}\small\item\em Get the material object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_shape_a22ff8a90ef947b44466be88fbaeeabe0}{is\+\_\+hit}} (\mbox{\hyperlink{class_ray3f}{Ray3f}} ray, \mbox{\hyperlink{class_vector3f}{Vector3f}} \&P, \mbox{\hyperlink{class_vector3f}{Vector3f}} \&N, float \&t) const
+\begin{DoxyCompactList}\small\item\em Renvoi un booléen en fonction de s\textquotesingle{}il y a intersection entre le rayon et la forme ou non. Modifie également par référence P,N, et t qui permettent ensuite de calculer l\textquotesingle{}intensité de la lumière au point courant. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Formes. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_shape_a2d06b8b9476e28f2ef36f228ac57fcce}\label{class_shape_a2d06b8b9476e28f2ef36f228ac57fcce}} 
+\index{Shape@{Shape}!Shape@{Shape}}
+\index{Shape@{Shape}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{Shape()}{Shape()}}
+{\footnotesize\ttfamily Shape\+::\+Shape (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_material}{Material}}}]{mat }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_shape}{Shape}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_shape_a6907736e63b959a3ac68aa1b5f02884a}\label{class_shape_a6907736e63b959a3ac68aa1b5f02884a}} 
+\index{Shape@{Shape}!get\_material@{get\_material}}
+\index{get\_material@{get\_material}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{get\_material()}{get\_material()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_material}{Material}} Shape\+::get\+\_\+material (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the material object. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_material}{Material}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_shape_a22ff8a90ef947b44466be88fbaeeabe0}\label{class_shape_a22ff8a90ef947b44466be88fbaeeabe0}} 
+\index{Shape@{Shape}!is\_hit@{is\_hit}}
+\index{is\_hit@{is\_hit}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{is\_hit()}{is\_hit()}}
+{\footnotesize\ttfamily bool Shape\+::is\+\_\+hit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ray3f}{Ray3f}}}]{ray,  }\item[{\mbox{\hyperlink{class_vector3f}{Vector3f}} \&}]{P,  }\item[{\mbox{\hyperlink{class_vector3f}{Vector3f}} \&}]{N,  }\item[{float \&}]{t }\end{DoxyParamCaption}) const}
+
+
+
+Renvoi un booléen en fonction de s\textquotesingle{}il y a intersection entre le rayon et la forme ou non. Modifie également par référence P,N, et t qui permettent ensuite de calculer l\textquotesingle{}intensité de la lumière au point courant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ray} & \\
+\hline
+{\em P} & \\
+\hline
+{\em N} & \\
+\hline
+{\em t} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+shape.\+h\item 
+shape.\+cpp\end{DoxyCompactItemize}

@@ -3,8 +3,7 @@
 
 
 /**
- * @brief Implémentation de la classe Materiel
- * 
+ * @brief Matériaux
  */
 class Material{
     private:

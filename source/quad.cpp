@@ -17,4 +17,4 @@ bool Quad::is_hit(const Ray3f &r,Vector3f & P, Vector3f & N,float &t) const
         return (t >= 0);
     }
     return false; 
-} 
+}

@@ -3,7 +3,7 @@
 #define RAY3F_H
 
 /**
- * @brief Implémentation de la Classe qui gère les rayons
+ * @brief Rayons
  * 
  */
 class Ray3f{

@@ -1,0 +1,222 @@
+\hypertarget{class_scene}{}\doxysection{Scene Class Reference}
+\label{class_scene}\index{Scene@{Scene}}
+
+
+\mbox{\hyperlink{class_scene}{Scene}}.  
+
+
+
+
+{\ttfamily \#include $<$scene.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_scene_af73a4ce3d5af9c0e873a81d175432e19}{Scene}} (const \mbox{\hyperlink{class_vector3f}{Vector3f}} \&source\+\_\+, const \mbox{\hyperlink{class_vector3f}{Vector3f}} \&camera\+\_\+, float intensite\+\_\+)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_scene}{Scene}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_a352d1a8f78ac46d4f293c53f69d63035}{add\+Sphere}} (const \mbox{\hyperlink{class_sphere}{Sphere}} \&s)
+\begin{DoxyCompactList}\small\item\em ajout d\textquotesingle{}une sphère à la scène \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_a6ae74af2666a1dea83948dc124e63080}{add\+Quad}} (const \mbox{\hyperlink{class_quad}{Quad}} \&q)
+\begin{DoxyCompactList}\small\item\em Ajout d\textquotesingle{}un plan (\mbox{\hyperlink{class_quad}{Quad}}) à la scène. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3f}{Vector3f}} \mbox{\hyperlink{class_scene_a539e504ad2ee56d9b0db0f28d3d78a62}{get\+\_\+source}} ()
+\begin{DoxyCompactList}\small\item\em Get the source object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3f}{Vector3f}} \mbox{\hyperlink{class_scene_a77e454f0ed7fe75925bb01ed4320d97f}{get\+\_\+camera}} ()
+\begin{DoxyCompactList}\small\item\em Get the camera object. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_scene_afaa5a33397972c83a3d298590c0aed85}{get\+\_\+intensite}} ()
+\begin{DoxyCompactList}\small\item\em Get the intensite object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_scene_a82634dc99d50a3200ca7de2a094191bd}{is\+\_\+hit\+\_\+global}} (const \mbox{\hyperlink{class_ray3f}{Ray3f}} \&r, \mbox{\hyperlink{class_vector3f}{Vector3f}} \&P, \mbox{\hyperlink{class_vector3f}{Vector3f}} \&N, \mbox{\hyperlink{class_shape}{Shape}} \&s, float \&t\+\_\+r)
+\begin{DoxyCompactList}\small\item\em Renvoi un booléen en fonction de s\textquotesingle{}il y a intersection entre le rayon et une forme de la scène ou non. Modifie également par référence P,N, et t\+\_\+r qui permettent ensuite de calculer l\textquotesingle{}intensité de la lumière au point courant. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3f}{Vector3f}} \mbox{\hyperlink{class_scene_a7d4b44b9b84f398440655f5851d3ea99}{get\+\_\+pixel\+\_\+color}} (const \mbox{\hyperlink{class_ray3f}{Ray3f}} \&r, int nb\+Rebonds)
+\begin{DoxyCompactList}\small\item\em Renvoi la couleur du pixel à écrire. Cette fonction est recursive et nb\+Rebonds détermine le nombre maximal de rebonds. get\+\_\+pixel\+\_\+color gère les surfaces réfléchis. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_shape}{Shape}} \mbox{\hyperlink{class_scene_a7c1ac5c32f2ad2ec3707ff4a5f8185f3}{operator\mbox{[}$\,$\mbox{]}}} (int i)
+\begin{DoxyCompactList}\small\item\em Renvoi la forme d\textquotesingle{}indice i. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_a0e47d01a0825616b7fa932d8ded67dc7}{render}} (int width, int height, std\+::string filename)
+\begin{DoxyCompactList}\small\item\em Rend la scène et génère l\textquotesingle{}image de sortie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_scene}{Scene}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_scene_af73a4ce3d5af9c0e873a81d175432e19}\label{class_scene_af73a4ce3d5af9c0e873a81d175432e19}} 
+\index{Scene@{Scene}!Scene@{Scene}}
+\index{Scene@{Scene}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{Scene()}{Scene()}}
+{\footnotesize\ttfamily Scene\+::\+Scene (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector3f}{Vector3f}} \&}]{source\+\_\+,  }\item[{const \mbox{\hyperlink{class_vector3f}{Vector3f}} \&}]{camera\+\_\+,  }\item[{float}]{intensite\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_scene}{Scene}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source\+\_\+} & \\
+\hline
+{\em camera\+\_\+} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_scene_a6ae74af2666a1dea83948dc124e63080}\label{class_scene_a6ae74af2666a1dea83948dc124e63080}} 
+\index{Scene@{Scene}!addQuad@{addQuad}}
+\index{addQuad@{addQuad}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{addQuad()}{addQuad()}}
+{\footnotesize\ttfamily void Scene\+::add\+Quad (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_quad}{Quad}} \&}]{q }\end{DoxyParamCaption})}
+
+
+
+Ajout d\textquotesingle{}un plan (\mbox{\hyperlink{class_quad}{Quad}}) à la scène. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em q} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_scene_a352d1a8f78ac46d4f293c53f69d63035}\label{class_scene_a352d1a8f78ac46d4f293c53f69d63035}} 
+\index{Scene@{Scene}!addSphere@{addSphere}}
+\index{addSphere@{addSphere}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{addSphere()}{addSphere()}}
+{\footnotesize\ttfamily void Scene\+::add\+Sphere (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_sphere}{Sphere}} \&}]{s }\end{DoxyParamCaption})}
+
+
+
+ajout d\textquotesingle{}une sphère à la scène 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_scene_a77e454f0ed7fe75925bb01ed4320d97f}\label{class_scene_a77e454f0ed7fe75925bb01ed4320d97f}} 
+\index{Scene@{Scene}!get\_camera@{get\_camera}}
+\index{get\_camera@{get\_camera}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{get\_camera()}{get\_camera()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3f}{Vector3f}} Scene\+::get\+\_\+camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the camera object. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_vector3f}{Vector3f}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_scene_afaa5a33397972c83a3d298590c0aed85}\label{class_scene_afaa5a33397972c83a3d298590c0aed85}} 
+\index{Scene@{Scene}!get\_intensite@{get\_intensite}}
+\index{get\_intensite@{get\_intensite}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{get\_intensite()}{get\_intensite()}}
+{\footnotesize\ttfamily float Scene\+::get\+\_\+intensite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the intensite object. 
+
+\begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_scene_a7d4b44b9b84f398440655f5851d3ea99}\label{class_scene_a7d4b44b9b84f398440655f5851d3ea99}} 
+\index{Scene@{Scene}!get\_pixel\_color@{get\_pixel\_color}}
+\index{get\_pixel\_color@{get\_pixel\_color}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{get\_pixel\_color()}{get\_pixel\_color()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3f}{Vector3f}} Scene\+::get\+\_\+pixel\+\_\+color (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_ray3f}{Ray3f}} \&}]{r,  }\item[{int}]{nb\+Rebonds }\end{DoxyParamCaption})}
+
+
+
+Renvoi la couleur du pixel à écrire. Cette fonction est recursive et nb\+Rebonds détermine le nombre maximal de rebonds. get\+\_\+pixel\+\_\+color gère les surfaces réfléchis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & \\
+\hline
+{\em nb\+Rebonds} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_vector3f}{Vector3f}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_scene_a539e504ad2ee56d9b0db0f28d3d78a62}\label{class_scene_a539e504ad2ee56d9b0db0f28d3d78a62}} 
+\index{Scene@{Scene}!get\_source@{get\_source}}
+\index{get\_source@{get\_source}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{get\_source()}{get\_source()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3f}{Vector3f}} Scene\+::get\+\_\+source (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the source object. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_vector3f}{Vector3f}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_scene_a82634dc99d50a3200ca7de2a094191bd}\label{class_scene_a82634dc99d50a3200ca7de2a094191bd}} 
+\index{Scene@{Scene}!is\_hit\_global@{is\_hit\_global}}
+\index{is\_hit\_global@{is\_hit\_global}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{is\_hit\_global()}{is\_hit\_global()}}
+{\footnotesize\ttfamily bool Scene\+::is\+\_\+hit\+\_\+global (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_ray3f}{Ray3f}} \&}]{r,  }\item[{\mbox{\hyperlink{class_vector3f}{Vector3f}} \&}]{P,  }\item[{\mbox{\hyperlink{class_vector3f}{Vector3f}} \&}]{N,  }\item[{\mbox{\hyperlink{class_shape}{Shape}} \&}]{s,  }\item[{float \&}]{t\+\_\+r }\end{DoxyParamCaption})}
+
+
+
+Renvoi un booléen en fonction de s\textquotesingle{}il y a intersection entre le rayon et une forme de la scène ou non. Modifie également par référence P,N, et t\+\_\+r qui permettent ensuite de calculer l\textquotesingle{}intensité de la lumière au point courant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & \\
+\hline
+{\em P} & \\
+\hline
+{\em N} & \\
+\hline
+{\em s} & \\
+\hline
+{\em t\+\_\+r} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_scene_a7c1ac5c32f2ad2ec3707ff4a5f8185f3}\label{class_scene_a7c1ac5c32f2ad2ec3707ff4a5f8185f3}} 
+\index{Scene@{Scene}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_shape}{Shape}} Scene\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Renvoi la forme d\textquotesingle{}indice i. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_shape}{Shape}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_scene_a0e47d01a0825616b7fa932d8ded67dc7}\label{class_scene_a0e47d01a0825616b7fa932d8ded67dc7}} 
+\index{Scene@{Scene}!render@{render}}
+\index{render@{render}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Scene\+::render (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height,  }\item[{std\+::string}]{filename }\end{DoxyParamCaption})}
+
+
+
+Rend la scène et génère l\textquotesingle{}image de sortie. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & \\
+\hline
+{\em height} & \\
+\hline
+{\em filename} & \\
+\hline
+\end{DoxyParams}
+Initialisation de la sortie
+
+Fin de l\textquotesingle{}initialisation de la sortie
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+scene.\+h\item 
+scene.\+cpp\end{DoxyCompactItemize}
