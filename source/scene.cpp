@@ -21,7 +21,7 @@ Vector3f Scene::get_camera(){
     return camera;
 }
 
-bool Scene::is_hit_global(const Ray3f &r,Vector3f & P, Vector3f & N,Shape & s){
+bool Scene::is_hit_global(const Ray3f &r,Vector3f & P, Vector3f & N,Shape & s,float& t_r){
     bool is_hit_global = false;
     float min_t = 1E100;
     //on check les intersections avec les plans
@@ -55,8 +55,11 @@ bool Scene::is_hit_global(const Ray3f &r,Vector3f & P, Vector3f & N,Shape & s){
             }
         }
     }
+    t_r = min_t;
     return is_hit_global;
 };
+
+Vector3f Scene::write_scene_pixel(const Ray3f & r);
 
 Shape Scene::operator[](int i){
     return shapes[i];
